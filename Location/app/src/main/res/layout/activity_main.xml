@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/map_height"
+        tools:context=".MapsActivity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/enlem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enlem"
+        android:layout_marginStart="@dimen/page_medium_margin_10dp"
+        app:layout_constraintTop_toTopOf="@id/text_enlem"
+        app:layout_constraintBottom_toBottomOf="@id/text_enlem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_enlem"/>
+
+    <EditText
+        android:id="@+id/text_enlem"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/input_height"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/page_margin_20dp"
+        android:layout_marginEnd="@dimen/page_medium_margin_10dp"
+        app:layout_constraintTop_toBottomOf="@id/map"
+        app:layout_constraintStart_toEndOf="@id/enlem"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/boylam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/boylam"
+        app:layout_constraintTop_toTopOf="@id/text_boylam"
+        app:layout_constraintBottom_toBottomOf="@id/text_boylam"
+        app:layout_constraintStart_toStartOf="@id/enlem"
+        app:layout_constraintEnd_toStartOf="@id/text_boylam"/>
+
+    <EditText
+        android:id="@+id/text_boylam"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/input_height"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/text_enlem"
+        app:layout_constraintStart_toStartOf="@id/text_enlem"
+        app:layout_constraintEnd_toEndOf="@id/text_enlem"/>
+
+    <TextView
+        android:id="@+id/postkod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/posta_kodu"
+        app:layout_constraintTop_toTopOf="@id/text_postkod"
+        app:layout_constraintBottom_toBottomOf="@id/text_postkod"
+        app:layout_constraintStart_toStartOf="@id/boylam"
+        app:layout_constraintEnd_toStartOf="@id/text_postkod"/>
+
+    <EditText
+        android:id="@+id/text_postkod"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/input_height"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/text_boylam"
+        app:layout_constraintStart_toStartOf="@id/text_boylam"
+        app:layout_constraintEnd_toEndOf="@id/text_boylam"/>
+
+    <TextView
+        android:id="@+id/ulke"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ulke"
+        app:layout_constraintTop_toTopOf="@id/text_ulke"
+        app:layout_constraintBottom_toBottomOf="@id/text_ulke"
+        app:layout_constraintStart_toStartOf="@id/postkod"
+        app:layout_constraintEnd_toStartOf="@id/text_ulke"/>
+
+    <EditText
+        android:id="@+id/text_ulke"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/input_height"
+        app:layout_constraintTop_toBottomOf="@id/text_postkod"
+        app:layout_constraintStart_toStartOf="@id/text_postkod"
+        app:layout_constraintEnd_toEndOf="@id/text_postkod"/>
+
+    <TextView
+        android:id="@+id/sehir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sehir"
+        app:layout_constraintTop_toTopOf="@id/spinCity"
+        app:layout_constraintBottom_toBottomOf="@id/spinCity"
+        app:layout_constraintStart_toStartOf="@id/ulke"
+        app:layout_constraintEnd_toStartOf="@id/spinCity"/>
+
+    <Spinner
+        android:id="@+id/spinCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_ulke"
+        app:layout_constraintStart_toStartOf="@id/text_ulke"
+        app:layout_constraintEnd_toEndOf="@id/text_ulke"/>
+
+    <TextView
+        android:id="@+id/ilce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ilce"
+        app:layout_constraintTop_toTopOf="@id/spinIlce"
+        app:layout_constraintBottom_toBottomOf="@id/spinIlce"
+        app:layout_constraintStart_toStartOf="@id/sehir"
+        app:layout_constraintEnd_toStartOf="@id/spinIlce"/>
+
+    <Spinner
+        android:id="@+id/spinIlce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/spinCity"
+        app:layout_constraintStart_toStartOf="@id/spinCity"
+        app:layout_constraintEnd_toEndOf="@id/spinCity"/>
+
+    <TextView
+        android:id="@+id/adres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/adres"
+        app:layout_constraintTop_toTopOf="@id/text_adres"
+        app:layout_constraintBottom_toBottomOf="@id/text_adres"
+        app:layout_constraintStart_toStartOf="@id/ilce"
+        app:layout_constraintEnd_toStartOf="@id/text_adres"/>
+
+    <EditText
+        android:id="@+id/text_adres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/spinIlce"
+        app:layout_constraintStart_toStartOf="@id/spinIlce"
+        app:layout_constraintEnd_toEndOf="@id/spinIlce"/>
+
+    <Button
+        android:id="@+id/konum"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:onClick="save"
+        android:text="Kayıtlı Konuma Git"
+        app:layout_constraintEnd_toEndOf="@id/text_adres"
+        app:layout_constraintStart_toStartOf="@id/text_adres"
+        app:layout_constraintTop_toBottomOf="@id/text_adres"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

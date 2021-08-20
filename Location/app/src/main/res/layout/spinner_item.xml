@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="contract"
+            type="com.egepolat.location.BaseContract" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/spinnerItemContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/spinnerItemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{contract.name}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="textStart"/>
+
+    </LinearLayout>
+
+</layout>

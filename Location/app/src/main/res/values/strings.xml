@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Location</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="posta_kodu">Posta Kodu:</string>
+    <string name="boylam">Boylam:</string>
+    <string name="ulke">Ülke:</string>
+    <string name="sehir">Şehir:</string>
+    <string name="ilce">İlçe:</string>
+    <string name="adres">Adres:</string>
+    <string name="enlem">Enlem:</string>
+</resources>
